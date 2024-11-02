@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SpaceByte</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes shooting-stars {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+        .shooting-star {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, white, transparent);
+            box-shadow: 0 0 10px white;
+            opacity: 0.8;
+            animation: shooting-stars linear;
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        .flickering {
+            animation: flicker 1s infinite;
+            color: #ff00ff;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.5);
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.5);
+            }
+            100% {
+                text-shadow: 0 0 20px rgba(255, 0, 255, 1), 0 0 30px rgba(255, 0, 255, 1);
+            }
+        }
+        .glow-on-hover:hover {
+            animation: glow 1s infinite alternate;
+        }
+        body {
+            overflow: hidden;
+            background-color: black; /* Set a black background */
+        }
+        #main-content {
+            overflow-y: auto;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-purple-600 glow-on-hover">
+                SpaceByte
+            </a>
+        </div>
+    </nav>
+
+    <div id="main-content" class="container mx-auto px-4 py-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient flickering">About Us</h1>
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6 md:p-8 animate-fadeIn">
+            <h2 class="text-2xl font-semibold mb-4 text-white">Our Involvement in DPS IT Fest 2024</h2>
+            <p class="text-gray-300 mb-4">
+                SpaceByte is proud to be a part of the DPS IT Fest 2024, hosted by DPS Greater Faridabad. This prestigious event brings together young minds passionate about technology and space exploration.
+            </p>
+            <p class="text-gray-300 mb-4">
+                Our team has worked tirelessly to create an immersive and educational platform that showcases the wonders of the universe. Through interactive elements, stunning visuals, and comprehensive information, we aim to inspire the next generation of space enthusiasts and scientists.
+            </p>
+            <h3 class="text-xl font-semibold mb-2 text-white">Our Mission</h3>
+            <p class="text-gray-300 mb-4">
+                At SpaceByte, our mission is to make the complexities of space accessible to everyone. We believe that by fostering curiosity and providing engaging content, we can inspire more people to look up at the stars and dream big.
+            </p>
+            <h3 class="text-xl font-semibold mb-2 text-white">Our Team</h3>
+            <p class="text-gray-300 mb-4">
+                We, Krishang Saharia and Aaradhy Tiwari, are passionate about space, technology, and education. Our team combines expertise in astrophysics, web development, and design to bring you this unique space exploration experience.
+            </p>
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4 text-white">Connect With Us</h3>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://github.com/Krishaangz" target="_blank" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">GitHub</a>
+                    <a href="https://www.instagram.com/krishaangz/" target="_blank" class="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">Instagram</a>
+                    <a href="https://www.youtube.com/@krishangz" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 py-4 mt-8">
+        <div class="container mx-auto text-center text-gray-300">
+            © 2024 SpaceByte. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const shootingStarContainer = document.createElement('div');
+        shootingStarContainer.classList.add('absolute', 'top-0', 'left-0', 'w-full', 'h-full', 'pointer-events-none');
+        document.body.appendChild(shootingStarContainer);
+
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.classList.add('shooting-star');
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`; // Start from a random vertical position
+            const duration = Math.random() * 2 + 1; // Duration between 1s and 3s
+            star.style.animationDuration = `${duration}s`;
+            shootingStarContainer.appendChild(star);
+            setTimeout(() => {
+                shootingStarContainer.removeChild(star);
+            }, duration * 1000); // Match timeout with animation duration
+        }
+
+        setInterval(createShootingStar, 500); // Create shooting stars every 500ms
+    </script>
+</body>
+</html>
