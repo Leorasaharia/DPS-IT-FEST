@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Gravity Experiences | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #ff0099;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #9900ff;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff99cc, #660066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(25, 207, 220, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .zero-gravity-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .zero-gravity-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../space-tourism.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Zero Gravity Experiences</h1>
+
+        <p class="text-center text-lg mb-10">
+            The thrill of zero gravity is no longer reserved for astronauts alone. As space tourism expands, the prospect of experiencing weightlessness becomes increasingly accessible to everyday adventurers. Imagine floating effortlessly within a spacecraft, engaging in playful maneuvers, and marveling at the breathtaking view of Earth below—this is just the beginning of what the future holds for zero-gravity experiences.
+        </p>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Anticipated Features of Zero Gravity Experiences</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Enhanced Training Programs -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Enhanced Training Programs</h3>
+                    <p>
+                        As demand grows, future zero-gravity experiences will include extensive training programs, allowing participants to acclimate to the sensation of weightlessness and maximize their enjoyment of the experience.
+                    </p>
+                </div>
+
+                <!-- Card 2: Themed Zero-Gravity Adventures -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Themed Zero-Gravity Adventures</h3>
+                    <p>
+                        Picture themed experiences—like zero-gravity sports or adventure games—where participants can engage in fun, competitive activities while floating in the spacecraft, blending entertainment with the thrill of space travel.
+                    </p>
+                </div>
+
+                <!-- Card 3: Virtual Reality Integration -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Virtual Reality Integration</h3>
+                    <p>
+                        Future zero-gravity experiences will likely incorporate virtual reality technology, allowing participants to explore imaginary worlds while feeling the effects of weightlessness, enhancing immersion and excitement.
+                    </p>
+                </div>
+
+                <!-- Card 4: Research Opportunities -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Research Opportunities</h3>
+                    <p>
+                        Collaborations with scientists will offer guests a chance to participate in research projects, contributing to our understanding of human physiology in space while enjoying their zero-gravity experience.
+                    </p>
+                </div>
+
+                <!-- Card 5: Wellness Retreats -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Wellness Retreats</h3>
+                    <p>
+                        Imagine zero-gravity wellness retreats focusing on relaxation and rejuvenation, combining the therapeutic effects of weightlessness with guided meditative practices to enhance mental and physical well-being.
+                    </p>
+                </div>
+
+                <!-- Card 6: Family-Friendly Experiences -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Family-Friendly Experiences</h3>
+                    <p>
+                        With advancements in safety and technology, zero-gravity experiences will become increasingly family-friendly, allowing families to share this awe-inspiring adventure together, fostering bonds in an extraordinary environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../pages/zero-gravity-1.jpg" alt="Zero gravity experience" class="zero-gravity-image">
+                <img src="../pages/zero-gravity-2.jpg" alt="Participants enjoying zero gravity" class="zero-gravity-image">
+                <img src="../pages/zero-gravity-3.jpg" alt="Family in zero gravity" class="zero-gravity-image">
+                <img src="../pages/zero-gravity-4.jpg" alt="Training for zero gravity" class="zero-gravity-image">
+                <img src="../pages/zero-gravity-5.jpg" alt="Virtual reality in zero gravity" class="zero-gravity-image">
+                <img src="../pages/zero-gravity-6.jpg" alt="Wellness retreat in space" class="zero-gravity-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

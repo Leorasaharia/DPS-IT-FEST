@@ -4,145 +4,215 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page | SpaceByte</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Harsh gradient with glow */
-    .futuristic-heading {
-      font-size: 5rem;
-      font-weight: bold;
-      background: linear-gradient(90deg, #ff0099, #9900ff);
-      -webkit-background-clip: text;
-      color: transparent;
-      text-shadow: 0px 0px 15px rgba(255, 0, 153, 0.5), 0px 0px 15px rgba(153, 0, 255, 0.5);
+    /* General Styles */
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      overflow: hidden; /* Prevent body overflow */
     }
 
-    /* Flickering effect */
-    .flicker-animation {
-      animation: flicker 2s infinite alternate ease-in-out;
+    /* SpaceByte Text */
+    .space-byte {
+      font-size: 2rem;
+      color: #ff0099;
+      text-shadow: 0 0 10px #ff0099, 0 0 20px #9900ff;
+    }
+
+    /* Main Content Area */
+    #main-content {
+      height: 90vh; /* Set height to allow scrolling */
+      overflow-y: auto; /* Enable vertical scrolling */
+      padding-bottom: 100px; /* Ensure space for the footer */
+    }
+
+    /* Section Cards */
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #e0e0e0;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.859); /* Changed to pink glow */
+    }
+    .card-title {
+      font-size: 1.75rem;
+      color: #ff0099;
+      background: linear-gradient(90deg, #845ec2, #f9f871); /* Updated gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .learn-more {
+      display: inline-block;
+      color: #ff0099;
+      transition: color 0.3s ease;
+    }
+    .learn-more:hover {
+      color: #9900ff;
+    }
+
+    /* Animated Heading */
+    .animated-heading {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #845ec2, #f9f871); /* Updated gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: float 3s ease-in-out infinite, flicker 2s infinite;
+      text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Flickering Effect for Subheading */
+    .flicker {
+      animation: flicker 1s infinite;
+      text-align: center;
+      font-size: 1.5rem;
     }
     @keyframes flicker {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.5; }
+      70% { opacity: 0.7; }
+      90% { opacity: 0.4; }
     }
 
-    /* Night Sky with Shooting Stars */
-    body {
-      background-color: #000;
-      color: #fff;
-    }
-    .night-sky { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
-    .star { position: absolute; width: 2px; height: 2px; background: white; border-radius: 50%; animation: shootingStar 3s linear infinite; }
-    @keyframes shootingStar {
-      0% { transform: translateX(0) translateY(0); opacity: 1; }
-      100% { transform: translateX(-500px) translateY(500px); opacity: 0; }
+    /* Music Toggle */
+    .music-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 1000; /* Ensure it's on top of other elements */
     }
 
-    /* Buttons and Theme Toggle Styles */
-    .circle-btn {
-      border-radius: 50%;
-      padding: 10px;
-      font-size: 1.5rem;
-      color: #fff;
-      background: #000000;
-      transition: all 0.3s ease;
+    /* Comet Animation */
+    .comet {
+      position: absolute;
+      width: 4px;
+      height: 15px;
+      background: linear-gradient(45deg, white, transparent);
+      animation: cometAnimation 4s linear infinite;
+      opacity: 0.8;
     }
-    .circle-btn:hover {
-      color: #ff00ff;
-      text-shadow: 0 0 5px #ff00ff, 0 0 10px #9900ff;
+    @keyframes cometAnimation {
+      0% { transform: translate(100vw, -50vh); opacity: 1; }
+      100% { transform: translate(-100vw, 50vh); opacity: 0; }
     }
   </style>
 </head>
 <body>
 
   <!-- Background Music -->
-  <audio id="background-music" loop>
-    <source src="assets/audio/space-music.mp3" type="audio/mpeg">
-  </audio>
+  <audio id="background-music" src="assets/audio/space-music.mp3" loop></audio>
 
-  <!-- Night Sky Background with Shooting Stars -->
-  <div class="night-sky">
-    <!-- 30 Shooting Stars -->
-    <template id="star-template">
-      <div class="star"></div>
-    </template>
-  </div>
+  <!-- Music Toggle Button -->
+  <div class="music-toggle" onclick="toggleMusic()">🔊</div>
 
-  <!-- SpaceByte Text and Music Toggle Button -->
-  <div class="flex justify-between items-center p-4 absolute top-0 left-0 w-full z-10">
-    <a href="index.html" class="text-2xl futuristic-heading">SpaceByte</a>
-    <div class="flex space-x-4">
-      <button id="toggle-music" class="circle-btn">🔊</button>
+  <!-- Navigation Bar -->
+  <nav class="p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="space-byte font-bold transition duration-300 hover:text-purple-500">SpaceByte</a>
     </div>
-  </div>
-  
-  <!-- Main Content with Solid Background -->
-  <div class="container mx-auto px-4 pt-36 pb-16 text-center bg-black rounded-md">
-    <h1 class="futuristic-heading mb-4">Welcome to SpaceByte</h1>
-    <p class="text-xl mb-8 flicker-animation">Explore the Cosmos. Discover the Infinite.</p>
-  </div>  
+  </nav>
 
-  <!-- Section Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="card bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-      <h2 class="text-2xl font-bold mb-2 text-pink-500">Spacipedia</h2>
-      <p>Explore our vast cosmic encyclopedia</p>
-      <a href="spacipedia.html" class="btn btn-primary mt-4 text-purple-500 hover:text-purple-700">Learn More</a>
+  <!-- Page Content -->
+  <main id="main-content" class="container mx-auto px-4 py-8">
+    <h1 class="animated-heading text-center mb-8">Welcome to SpaceByte</h1>
+    <p class="flicker">Explore the Cosmos. Discover the Infinite.</p>
+
+    <!-- Space Sections -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Spacipedia -->
+      <div class="card">
+        <h2 class="card-title">Spacipedia</h2>
+        <p class="mt-2">Explore our vast cosmic encyclopedia.</p>
+        <a href="spacipedia.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
+
+      <!-- New Discoveries -->
+      <div class="card">
+        <h2 class="card-title">New Discoveries</h2>
+        <p class="mt-2">Latest breakthroughs in space science.</p>
+        <a href="new-discoveries.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
+
+      <!-- Space Tourism -->
+      <div class="card">
+        <h2 class="card-title">Space Tourism</h2>
+        <p class="mt-2">Your gateway to the stars and unforgettable adventures.</p>
+        <a href="space-tourism.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
+
+      <!-- Space Games -->
+      <div class="card">
+        <h2 class="card-title">Space Games</h2>
+        <p class="mt-2">Engage in thrilling space adventures.</p>
+        <a href="space-games.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
+
+      <!-- Personalities -->
+      <div class="card">
+        <h2 class="card-title">Personalities</h2>
+        <p class="mt-2">Discover famous personalities advocating the Cosmos.</p>
+        <a href="personalities.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
+
+      <!-- About Us -->
+      <div class="card">
+        <h2 class="card-title">About Us</h2>
+        <p class="mt-2">Learn about our mission and team.</p>
+        <a href="about.html" class="learn-more mt-4">Learn More &raquo;</a>
+      </div>
     </div>
-    <div class="card bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-      <h2 class="text-2xl font-bold mb-2 text-pink-500">New Discoveries</h2>
-      <p>Latest breakthroughs in space science</p>
-      <a href="new-discoveries.html" class="btn btn-primary mt-4 text-purple-500 hover:text-purple-700">Learn More</a>
-    </div>
-    <div class="card bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-      <h2 class="text-2xl font-bold mb-2 text-pink-500">Space Tourism</h2>
-      <p>Your gateway to the stars</p>
-      <a href="space-tourism.html" class="btn btn-primary mt-4 text-purple-500 hover:text-purple-700">Learn More</a>
-    </div>
-    <div class="card bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-      <h2 class="text-2xl font-bold mb-2 text-pink-500">Space Games</h2>
-      <p>Engage in thrilling space adventures</p>
-      <a href="space-games.html" class="btn btn-primary mt-4 text-purple-500 hover:text-purple-700">Learn More</a>
-    </div>
-    <div class="card bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-      <h2 class="text-2xl font-bold mb-2 text-pink-500">About Us</h2>
-      <p>Learn about our mission and team</p>
-      <a href="about.html" class="btn btn-primary mt-4 text-purple-500 hover:text-purple-700">Learn More</a>
-    </div>
-  </div>
-  
+  </main>
+
+  <!-- Comet Animations -->
+  <div class="comet" style="top: 10%; left: 10%;"></div>
+  <div class="comet" style="top: 30%; left: 20%;"></div>
+  <div class="comet" style="top: 50%; left: 30%;"></div>
+  <div class="comet" style="top: 20%; left: 50%;"></div>
+  <div class="comet" style="top: 70%; left: 80%;"></div>
+  <div class="comet" style="top: 40%; left: 10%;"></div>
+  <div class="comet" style="top: 80%; left: 60%;"></div>
+  <div class="comet" style="top: 15%; left: 90%;"></div>
+  <div class="comet" style="top: 65%; left: 40%;"></div>
+  <div class="comet" style="top: 35%; left: 25%;"></div>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-4 text-center">
     <p>© 2024 SpaceByte. All rights reserved.</p>
   </footer>
 
+  <!-- Smooth Animations for Expanding Cards -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Shooting Stars
-    function createShootingStars() {
-      const nightSky = document.querySelector('.night-sky');
-      const template = document.getElementById('star-template').content;
-      for (let i = 0; i < 30; i++) {
-        const star = template.cloneNode(true);
-        star.querySelector('.star').style.top = `${Math.random() * 100}%`;
-        star.querySelector('.star').style.left = `${Math.random() * 100}%`;
-        star.querySelector('.star').style.animationDelay = `${Math.random() * 3}s`;
-        nightSky.appendChild(star);
+    // Background music toggle
+    const music = document.getElementById('background-music');
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
       }
     }
-    createShootingStars();
-
-    // Toggle Background Music
-    const backgroundMusic = document.getElementById('background-music');
-    const toggleMusicBtn = document.getElementById('toggle-music');
-    toggleMusicBtn.addEventListener('click', () => {
-      if (backgroundMusic.paused) {
-        backgroundMusic.play();
-        toggleMusicBtn.textContent = '🔈';
-      } else {
-        backgroundMusic.pause();
-        toggleMusicBtn.textContent = '🔊';
-      }
-    });
+    // Play music automatically when the page loads
+    window.onload = () => {
+      const music = document.getElementById('background-music');
+      music.play();
+    };
   </script>
 </body>
 </html>

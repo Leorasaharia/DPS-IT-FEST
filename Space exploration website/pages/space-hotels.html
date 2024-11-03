@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Hotels | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #ff0099;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #9900ff;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff99cc, #660066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(25, 207, 220, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .hotel-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .hotel-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../space-tourism.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Space Hotels</h1>
+
+        <p class="text-center text-lg mb-10">
+            Imagine a future where space hotels become a reality—a destination unlike any on Earth. While still in the realm of possibility, such hotels could offer humans a rare chance to live, relax, and explore in the cosmos, reimagining the boundaries of hospitality and human experience.
+        </p>
+
+        <!-- Hotel Features Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Potential Features of Future Space Hotels</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Panoramic Views -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Panoramic Views of Earth</h3>
+                    <p>
+                        One day, guests in space might enjoy 360-degree views of Earth from observation decks designed to showcase the beauty of our planet. Floating above the world, they could observe continents, oceans, and clouds, experiencing our home from a new perspective.
+                    </p>
+                </div>
+
+                <!-- Card 2: Zero-Gravity Spa -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Zero-Gravity Spa</h3>
+                    <p>
+                        Imagine a spa in zero gravity—future space hotels could offer such an experience, where the absence of weight brings a new level of relaxation. The sensations of floating and weightlessness may redefine what it means to unwind.
+                    </p>
+                </div>
+
+                <!-- Card 3: Fine Dining in Orbit -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Fine Dining in Orbit</h3>
+                    <p>
+                        Dining in orbit could allow guests to enjoy meals tailored for the space environment. Culinary creations may be designed to handle zero gravity, combining delicious food with the novelty of floating in a cosmic setting.
+                    </p>
+                </div>
+
+                <!-- Card 4: Space Gym -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Space Gym</h3>
+                    <p>
+                        Physical fitness in space would be essential. Future hotels could feature specialized exercise equipment to help guests maintain muscle strength, providing a unique workout experience where gravity doesn’t hold them down.
+                    </p>
+                </div>
+
+                <!-- Card 5: Cosmic Entertainment Hub -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Cosmic Entertainment Hub</h3>
+                    <p>
+                        Entertainment could take on new forms in space, from stargazing lounges and interactive VR experiences to zero-gravity games and social events, redefining how we unwind in a weightless environment.
+                    </p>
+                </div>
+
+                <!-- Card 6: Observation Dome -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Observation Dome</h3>
+                    <p>
+                        With clear views of planets and stars, observation domes might allow guests to observe distant celestial bodies. Equipped with telescopes, these domes could offer a front-row seat to the wonders of the universe.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../pages/panoramic-view.jpg" alt="Panoramic view from space hotel" class="hotel-image">
+                <img src="../pages/zero-gravity-dining.jpg" alt="Zero gravity dining" class="hotel-image">
+                <img src="../pages/space-gym.jpg" alt="Space gym facilities" class="hotel-image">
+                <img src="../pages/luxury-suite.jpg" alt="Luxury suite in space hotel" class="hotel-image">
+                <img src="../pages/observation-dome.jpg" alt="Observation dome view" class="hotel-image">
+                <img src="../pages/zero-gravity-relax.jpg" alt="Zero gravity relaxation area" class="hotel-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

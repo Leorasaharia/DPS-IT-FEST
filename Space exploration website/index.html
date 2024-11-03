@@ -82,15 +82,10 @@
 </head>
 <body>
 
-  <!-- Background music with toggle button -->
-  <audio id="background-music" loop>
+  <!-- Background music -->
+  <audio id="background-music" loop autoplay>
     <source src="assets/audio/space-music.mp3" type="audio/mp3">
   </audio>
-
-  <!-- Music Toggle Button -->
-  <div class="absolute top-5 right-5">
-    <button class="btn" onclick="toggleMusic()">🔊</button>
-  </div>
 
   <!-- Welcome Section -->
   <div class="flex flex-col items-center justify-center min-h-screen text-center px-4">
@@ -117,18 +112,9 @@
   <div class="comet" style="top: 9%; left: 30%;"></div>
 
   <script>
-    // Background music toggle
-    const music = document.getElementById('background-music');
-    function toggleMusic() {
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    }
-
     // Play music automatically when the page loads
     window.onload = () => {
+      const music = document.getElementById('background-music');
       music.play();
     };
 

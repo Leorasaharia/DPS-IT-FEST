@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Exploration | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #ff0099;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #9900ff;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff99cc, #660066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(25, 207, 220, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .moon-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .moon-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../space-tourism.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Moon Exploration</h1>
+
+        <p class="text-center text-lg mb-10">
+            The moon, Earth's closest neighbor, is not just a celestial body but a canvas for future exploration and discovery. As humanity looks to the stars, moon exploration holds the key to unlocking secrets about our solar system, from its geology and resources to the possibility of establishing lunar bases. Envision a world where lunar tourism becomes a reality, offering unique experiences that redefine the boundaries of space travel and human adventure.
+        </p>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Potential Features of Moon Exploration</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Lunar Landings -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Lunar Landings</h3>
+                    <p>
+                        Experience the thrill of landing on the lunar surface, where you can walk on the moon's regolith and explore the desolate beauty of craters and plains. This adventure promises not just a journey but a deeper connection to our planet's history and future.
+                    </p>
+                </div>
+
+                <!-- Card 2: Lunar Habitats -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Lunar Habitats</h3>
+                    <p>
+                        Stay in cutting-edge habitats designed for lunar conditions, offering comfort while allowing guests to experience life on the moon. These habitats could serve as a stepping stone for future colonies, paving the way for long-term lunar habitation.
+                    </p>
+                </div>
+
+                <!-- Card 3: Spacewalks -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Spacewalks</h3>
+                    <p>
+                        Participate in guided spacewalks to experience the moon's low gravity and breathtaking views of Earth from above. Each step will be a moment in history, as you walk where few have tread before and gaze back at the home world.
+                    </p>
+                </div>
+
+                <!-- Card 4: Lunar Rover Tours -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Lunar Rover Tours</h3>
+                    <p>
+                        Explore the lunar landscape in specially designed rovers, allowing you to traverse the moon's surface and discover its hidden wonders. This adventure will provide a unique perspective on lunar geology, unveiling the mysteries that lie beneath the surface.
+                    </p>
+                </div>
+
+                <!-- Card 5: Lunar Science Experiments -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Lunar Science Experiments</h3>
+                    <p>
+                        Participate in scientific experiments that contribute to our understanding of the moon and its potential for future colonization. By engaging in these experiments, guests will play a role in humanity's quest for knowledge and exploration.
+                    </p>
+                </div>
+
+                <!-- Card 6: Night Sky Observation -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Night Sky Observation</h3>
+                    <p>
+                        Enjoy unparalleled views of the night sky, free from Earth's atmosphere, and witness celestial events in their purest form. This unique experience will deepen our appreciation for the universe, inspiring future generations to look up and wonder.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../pages/lunar-landing.jpg" alt="Lunar landing" class="moon-image">
+                <img src="../pages/lunar-habitat.jpg" alt="Lunar habitat" class="moon-image">
+                <img src="../pages/moon-spacewalk.jpg" alt="Moon spacewalk" class="moon-image">
+                <img src="../pages/lunar-rover.jpg" alt="Lunar rover" class="moon-image">
+                <img src="../pages/lunar-science.jpg" alt="Lunar science experiments" class="moon-image">
+                <img src="../pages/night-sky.jpg" alt="Night sky observation" class="moon-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

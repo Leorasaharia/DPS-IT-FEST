@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Cruises | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #ff0099;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #9900ff;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff99cc, #660066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(25, 207, 220, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .cruise-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .cruise-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../space-tourism.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Space Cruises</h1>
+
+        <p class="text-center text-lg mb-10">
+            As we venture into the cosmos, space cruises emerge as a thrilling way to explore the final frontier. With cutting-edge spacecraft and exhilarating itineraries, travelers will soon have the opportunity to embark on unforgettable journeys across the galaxy, witnessing celestial wonders and experiencing the vastness of space like never before.
+        </p>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Exciting Features of Space Cruises</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Galactic Itineraries -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Galactic Itineraries</h3>
+                    <p>
+                        Explore custom itineraries that take you to stunning locations in our solar system, including flybys of planets and moons, allowing passengers to experience breathtaking views of these celestial bodies.
+                    </p>
+                </div>
+
+                <!-- Card 2: Luxury Accommodations -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Luxury Accommodations</h3>
+                    <p>
+                        Experience unparalleled comfort aboard state-of-the-art space cruisers featuring luxurious suites, gourmet dining, and amenities designed to provide a first-class experience even in the depths of space.
+                    </p>
+                </div>
+
+                <!-- Card 3: Educational Programs -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Educational Programs</h3>
+                    <p>
+                        Participate in interactive workshops and lectures led by renowned scientists and astronauts, gaining insights into space exploration and the science behind the universe while onboard your cruise.
+                    </p>
+                </div>
+
+                <!-- Card 4: Spacewalks -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Spacewalks</h3>
+                    <p>
+                        For the adventurous, take part in supervised spacewalks, giving you the chance to float outside the spacecraft and truly immerse yourself in the awe-inspiring expanse of space.
+                    </p>
+                </div>
+
+                <!-- Card 5: Cosmic Entertainment -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Cosmic Entertainment</h3>
+                    <p>
+                        Enjoy cosmic-themed entertainment, from immersive virtual reality experiences to stargazing nights under the stars, creating memories that last a lifetime as you traverse the universe.
+                    </p>
+                </div>
+
+                <!-- Card 6: Sustainable Practices -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Sustainable Practices</h3>
+                    <p>
+                        Space cruises will prioritize sustainability by utilizing renewable energy sources and implementing eco-friendly practices, ensuring that our adventures in space are not only thrilling but also responsible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../pages/space-cruise-1.jpg" alt="Space cruise ship" class="cruise-image">
+                <img src="../pages/space-cruise-2.jpg" alt="Space travel experience" class="cruise-image">
+                <img src="../pages/space-cruise-3.jpg" alt="Astronaut on spacewalk" class="cruise-image">
+                <img src="../pages/space-cruise-4.jpg" alt="Luxurious space accommodation" class="cruise-image">
+                <img src="../pages/space-cruise-5.jpg" alt="Stargazing from a spacecraft" class="cruise-image">
+                <img src="../pages/space-cruise-6.jpg" alt="Educational program in space" class="cruise-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

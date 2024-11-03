@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Colonization | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #ff0099;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #9900ff;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #ff99cc, #660066);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(25, 207, 220, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .mars-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .mars-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../space-tourism.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Mars Colonization</h1>
+
+        <p class="text-center text-lg mb-10">
+            Mars, the Red Planet, captivates our imagination as the next frontier for human colonization. With its rich geological history and potential resources, the future of Mars colonization is filled with exciting possibilities. As we stand on the brink of this new era, we envision a time when humans can thrive on Mars, exploring its vast landscapes and establishing sustainable settlements that could serve as a springboard for further exploration of our solar system.
+        </p>
+
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Potential Features of Mars Colonization</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Martian Settlements -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Martian Settlements</h3>
+                    <p>
+                        Envision thriving communities on Mars, complete with sustainable habitats and agricultural systems. These settlements will not only support life but will also serve as a beacon of human ingenuity and resilience.
+                    </p>
+                </div>
+
+                <!-- Card 2: Resource Utilization -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Resource Utilization</h3>
+                    <p>
+                        Harness the Martian environment by utilizing local resources for construction and sustenance. The extraction of water and minerals will pave the way for self-sufficient colonies, reducing reliance on Earth.
+                    </p>
+                </div>
+
+                <!-- Card 3: Scientific Research -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Scientific Research</h3>
+                    <p>
+                        Engage in groundbreaking research to uncover the secrets of Mars. By studying its geology and potential for past life, colonizers will contribute significantly to our understanding of planetary evolution.
+                    </p>
+                </div>
+
+                <!-- Card 4: Exploration Rovers -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Exploration Rovers</h3>
+                    <p>
+                        Travel across the Martian surface in advanced rovers designed for both exploration and scientific experimentation. These vehicles will enable colonizers to gather data and uncover hidden wonders beneath the red dust.
+                    </p>
+                </div>
+
+                <!-- Card 5: Martian Agriculture -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Martian Agriculture</h3>
+                    <p>
+                        Imagine growing crops in controlled environments on Mars, contributing to food security for settlers. This agricultural revolution could turn the barren landscape into fertile ground, supporting life in unimaginable ways.
+                    </p>
+                </div>
+
+                <!-- Card 6: Interplanetary Transport -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-pink-400 mb-2">Interplanetary Transport</h3>
+                    <p>
+                        Develop advanced transport systems for seamless travel between Earth and Mars. This innovation will not only facilitate colonization but also open avenues for trade and cultural exchange across planets.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-purple-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../pages/mars-settlement.jpg" alt="Martian settlement" class="mars-image">
+                <img src="../pages/mars-resources.jpg" alt="Martian resources" class="mars-image">
+                <img src="../pages/mars-research.jpg" alt="Scientific research on Mars" class="mars-image">
+                <img src="../pages/mars-rover.jpg" alt="Mars rover" class="mars-image">
+                <img src="../pages/mars-agriculture.jpg" alt="Martian agriculture" class="mars-image">
+                <img src="../pages/interplanetary-transport.jpg" alt="Interplanetary transport" class="mars-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
