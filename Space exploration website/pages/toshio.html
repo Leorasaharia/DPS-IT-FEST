@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toshio Nishida | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back to Discoveries Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #dbf86f;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #007263;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #dbf86f, #007263);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(173, 250, 111, 0.7), 0 0 20px rgba(0, 114, 99, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(219, 248, 111, 0.859);
+        }
+
+        /* Image Hover Effect */
+        .toshio-image {
+            border-radius: 8px;
+            transition: transform 0.5s ease, box-shadow 0.3s ease;
+        }
+        .toshio-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(173, 250, 111, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../personalities.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Toshio Nishida</h1>
+
+        <!-- Toshio Nishida Image -->
+        <div class="flex justify-center mb-6">
+            <img src="../assets/images/personalities/toshio-main.png" alt="Toshio Nishida" class="toshio-image max-w-xs sm:max-w-md lg:max-w-lg">
+        </div>
+
+        <!-- Introductory Description -->
+        <p class="text-center text-lg mb-10">
+            Toshio Nishida, an influential figure in Japanese space exploration, has been dedicated to advancing aerospace research and promoting international collaboration. His contributions have helped Japan emerge as a leading force in space technology and exploration.
+        </p>
+
+        <!-- Contributions Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold text-green-500 mb-6">Key Contributions to Space Exploration</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1: Hayabusa Mission -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">Hayabusa Mission</h3>
+                    <p>
+                        Nishida played a role in Japan's pioneering Hayabusa missions, which successfully returned asteroid samples to Earth, expanding our understanding of solar system formation.
+                    </p>
+                </div>
+
+                <!-- Card 2: Kibo Module on ISS -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">Kibo Module on ISS</h3>
+                    <p>
+                        He contributed to the development of the Kibo laboratory module, Japan’s first human space facility on the International Space Station, fostering scientific research in microgravity.
+                    </p>
+                </div>
+
+                <!-- Card 3: H-II Transfer Vehicle -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">H-II Transfer Vehicle</h3>
+                    <p>
+                        The H-II Transfer Vehicle, a critical cargo resupply vehicle, demonstrated Japan’s capabilities in autonomous space technology under Nishida’s guidance.
+                    </p>
+                </div>
+
+                <!-- Card 4: Epsilon Rocket Development -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">Epsilon Rocket Development</h3>
+                    <p>
+                        Nishida oversaw the development of the Epsilon rocket, an efficient and cost-effective launch vehicle, contributing to Japan’s growing launch capabilities.
+                    </p>
+                </div>
+
+                <!-- Card 5: Space Science and Education -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">Space Science and Education</h3>
+                    <p>
+                        He has been an advocate for space science education, inspiring young generations to pursue careers in aerospace through outreach and educational programs.
+                    </p>
+                </div>
+
+                <!-- Card 6: Global Partnerships -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold text-green-400 mb-2">Global Partnerships</h3>
+                    <p>
+                        Nishida promoted collaboration with agencies worldwide, enhancing Japan’s involvement in international missions and fostering a culture of cooperation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <h2 class="text-center text-2xl font-semibold text-green-500 mb-6">Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Add images once available in the src attributes below -->
+                <img src="../assets/images/personalities/toshio-1.png" alt="Toshio Nishida with Hayabusa" class="toshio-image">
+                <img src="../assets/images/personalities/toshio-2.png" alt="Kibo Module on ISS" class="toshio-image">
+                <img src="../assets/images/personalities/toshio-3.png" alt="H-II Transfer Vehicle" class="toshio-image">
+                <img src="../assets/images/personalities/toshio-4.png" alt="Epsilon Rocket" class="toshio-image">
+                <img src="../assets/images/personalities/toshio-5.png" alt="Space Science Education" class="toshio-image">
+                <img src="../assets/images/personalities/toshio-6.png" alt="International Collaborations" class="toshio-image">
+            </div>
+        </section>        
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
