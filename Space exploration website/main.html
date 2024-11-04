@@ -119,7 +119,7 @@
   <audio id="background-music" src="assets/audio/space-music.mp3" loop></audio>
 
   <!-- Music Toggle Button -->
-  <div class="music-toggle" onclick="toggleMusic()">🔊</div>
+  <div class="music-toggle" id="music-toggle" onclick="toggleMusic()">🔊</div>
 
   <!-- Navigation Bar -->
   <nav class="p-4">
@@ -201,11 +201,15 @@
   <script>
     // Background music toggle
     const music = document.getElementById('background-music');
+    const musicToggle = document.getElementById('music-toggle');
+
     function toggleMusic() {
       if (music.paused) {
         music.play();
+        musicToggle.innerHTML = '🔊'; // Update to loudspeaker emoji
       } else {
         music.pause();
+        musicToggle.innerHTML = '🔈'; // Update to muted speaker emoji
       }
     }
     // Play music automatically when the page loads
