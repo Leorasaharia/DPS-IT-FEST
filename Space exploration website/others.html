@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theories and Discoveries | SpaceByte</title>
+    <title>Others | SpaceByte</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -11,94 +11,167 @@
             background-color: black;
             color: white;
             font-family: 'Orbitron', sans-serif;
-            overflow-x: hidden; /* Allow vertical scrolling while hiding horizontal overflow */
+            overflow-x: hidden;
         }
-        /* Shooting Stars Animation */
-        @keyframes shootingStar {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
+
+        /* Back Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #F6FF4C;
+            transition: color 0.3s ease;
         }
-        .comet {
-            position: absolute;
-            width: 4px;
-            height: 15px;
-            background: linear-gradient(45deg, white, transparent);
-            animation: shootingStar 3s linear infinite;
-            opacity: 0.8;
+        .back-btn:hover {
+            color: #EB1214;
         }
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(90deg, #ff0099, #9900ff);
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #F6FF4C, #EB1214);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 2.5rem; /* Adjust font size as needed */
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(246, 255, 76, 0.7), 0 0 20px rgba(235, 18, 20, 0.7);
         }
-        /* Glow Effect */
-        .glow {
-            text-shadow: 0 0 10px #ff0099, 0 0 20px #9900ff;
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+            height: 100%;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(246, 255, 76, 0.859);
+        }
+
+        /* Visuals Section Styles */
+        .cosmos-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+        .cosmos-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(246, 255, 76, 0.8), 0 0 25px rgba(235, 18, 20, 0.7);
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Back Button -->
     <nav class="p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-purple-300 glow hover:text-purple-500 transition duration-300">SpaceByte</a>
-            <div class="flex items-center space-x-4">
-                <a href="new-discoveries.html" class="text-purple-300 glow hover:text-purple-500 transition duration-300">Back to Discoveries</a>
-            </div>
+        <div class="container mx-auto flex justify-start">
+            <a href="new-discoveries.html" class="back-btn font-bold transition duration-300">←</a>
         </div>
     </nav>
 
-    <!-- Theories and Discoveries Section -->
+    <!-- Page Content -->
     <main class="container mx-auto px-4 py-8">
-        <h1 class="text-5xl font-bold text-center mb-8 gradient-text glow">Theories and Discoveries</h1>
-        
-        <div class="mb-4">
-            <h2 class="text-3xl font-semibold gradient-text glow">Quantum Mechanics and Its Implications</h2>
-            <p class="mt-2">
-                Quantum mechanics has revolutionized our understanding of the microscopic world. It introduces concepts such as superposition and entanglement, challenging classical interpretations of physics. These principles have profound implications for fields ranging from computing to cosmology.
-            </p>
-            <img src="assets/images/others/quantum-mechanics.png" alt="Quantum Mechanics" class="w-full h-auto mt-4 rounded-lg shadow-lg">
-        </div>
+        <h1 class="animated-heading text-center mb-8">Other Discoveries in the Cosmos</h1>
 
-        <div class="mb-4">
-            <h2 class="text-3xl font-semibold gradient-text glow">String Theory: A New Dimension</h2>
-            <p class="mt-2">
-                String theory proposes that the fundamental particles of the universe are not point-like but rather one-dimensional strings. This theory suggests the existence of multiple dimensions beyond our observable universe and seeks to unify gravity with the other fundamental forces.
-            </p>
-            <img src="assets/images/others/string-theory.png" alt="String Theory" class="w-full h-auto mt-4 rounded-lg shadow-lg">
-        </div>
+        <p class="text-center text-lg mb-10">
+            The cosmos is a vast and mysterious realm filled with intriguing discoveries and theories. This page explores various aspects such as astrobiology, quantum mechanics, and more, revealing the complexities of our universe.
+        </p>
 
-        <div class="mb-4">
-            <h2 class="text-3xl font-semibold gradient-text glow">Dark Matter and Dark Energy</h2>
-            <p class="mt-2">
-                Dark matter and dark energy are two of the most mysterious components of our universe. While dark matter is believed to make up a significant portion of the universe's mass, dark energy is thought to be responsible for the accelerated expansion of the universe. Ongoing research aims to uncover their true nature and implications.
-            </p>
-            <img src="assets/images/others/dark-matter-energy.png" alt="Dark Matter and Dark Energy" class="w-full h-auto mt-4 rounded-lg shadow-lg">
-        </div>
+        <!-- Card Tile Section Design for Other Discoveries -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #F6FF4C, #EB1214); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Key Theories and Discoveries</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="mb-4">
-            <h2 class="text-3xl font-semibold gradient-text glow">Recent Discoveries in Astrobiology</h2>
-            <p class="mt-2">
-                Astrobiology explores the potential for life beyond Earth. Recent discoveries of extremophiles on our planet and exoplanets in habitable zones have expanded our understanding of where life might exist in the universe. Ongoing missions continue to search for signs of life on Mars and icy moons like Europa and Enceladus.
-            </p>
-            <img src="assets/images/others/astrobiology.png" alt="Astrobiology Discoveries" class="w-full h-auto mt-4 rounded-lg shadow-lg">
-        </div>
+                <!-- Card 1: Astrobiology -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">Astrobiology</h3>
+                    <p>The study of the origin, evolution, and potential existence of life in the universe.</p>
+                </div>
+
+                <!-- Card 2: Quantum Mechanics -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">Quantum Mechanics</h3>
+                    <p>A fundamental theory in physics describing the physical properties of nature at the scale of atoms and subatomic particles.</p>
+                </div>
+
+                <!-- Card 3: James Webb Space Telescope (JWST) Discoveries -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">James Webb Space Telescope (JWST) Discoveries</h3>
+                    <p>Revolutionary findings from JWST that enhance our understanding of the universe, including the study of exoplanets and distant galaxies.</p>
+                </div>
+
+                <!-- Card 4: Pulsar Astronomy -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">Pulsar Astronomy</h3>
+                    <p>The study of pulsars, which are rotating neutron stars that emit beams of radiation, providing insights into the behavior of matter under extreme conditions.</p>
+                </div>
+
+                <!-- Card 5: Space Debris and Mitigation -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">Space Debris and Mitigation</h3>
+                    <p>The challenge of managing and reducing the growing amount of debris in Earth's orbit, which poses risks to satellites and space missions.</p>
+                </div>
+
+                <!-- Card 6: Exoplanets -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #F6FF4C;">Exoplanets</h3>
+                    <p>Planets located outside our solar system, which have been a focus of research in the search for extraterrestrial life.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visuals Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #F6FF4C, #EB1214); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Cosmic Discoveries</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Cosmos Image 1 -->
+                <div>
+                    <img src="assets/images/others/astrobiology.png" alt="Astrobiology" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">Astrobiology</p>
+                </div>
+
+                <!-- Cosmos Image 2 -->
+                <div>
+                    <img src="assets/images/others/quantum-mechanics.png" alt="Quantum Mechanics" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">Quantum Mechanics</p>
+                </div>
+
+                <!-- Cosmos Image 3 -->
+                <div>
+                    <img src="assets/images/others/others.png" alt="James Webb Space Telescope Discoveries" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">JWST Discoveries</p>
+                </div>
+
+                <!-- Cosmos Image 4 -->
+                <div>
+                    <img src="assets/images/others/others (1).png" alt="Pulsar Astronomy" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">Pulsar Astronomy</p>
+                </div>
+
+                <!-- Cosmos Image 5 -->
+                <div>
+                    <img src="assets/images/others/others (2).png" alt="Space Debris and Mitigation" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">Space Debris</p>
+                </div>
+
+                <!-- Cosmos Image 6 -->
+                <div>
+                    <img src="assets/images/others/others (3).png" alt="Exoplanets" class="w-full h-auto cosmos-image">
+                    <p class="text-center mt-2">Exoplanets</p>
+                </div>
+            </div>
+        </section>
+
     </main>
-
-    <!-- Shooting Stars Background -->
-    <div class="comet" style="top: 0%; left: 10%; animation-delay: 0s;"></div>
-    <div class="comet" style="top: 30%; left: 20%; animation-delay: 1s;"></div>
-    <div class="comet" style="top: 70%; left: 80%; animation-delay: 2s;"></div>
-    <div class="comet" style="top: 20%; left: 40%; animation-delay: 3s;"></div>
-    <div class="comet" style="top: 60%; left: 70%; animation-delay: 4s;"></div>
-    <div class="comet" style="top: 50%; left: 0%; animation-delay: 5s;"></div>
-    <div class="comet" style="top: 41%; left: 22%; animation-delay: 6s;"></div>
-    <div class="comet" style="top: 11%; left: 92%; animation-delay: 7s;"></div>
-    <div class="comet" style="top: 85%; left: 66%; animation-delay: 8s;"></div>
-    <div class="comet" style="top: 9%; left: 30%; animation-delay: 9s;"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
