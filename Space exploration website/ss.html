@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Styling for the Back button */
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 1.5rem;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Ensure the container is not overlapped by the button */
+    .container {
+      padding-top: 50px; /* Adjust the padding to prevent overlap */
+    }
+  </style>
+</head>
+<body>
+  <!-- Back Button -->
+  <a href="spacipedia.html" class="back-button">←</a>
+
+  <div class="container">
+    <div class="sun">
+      <img src="assets/images/planets/sun.png" alt="sun">
+    </div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth">
+      <div class="moon"></div>
+    </div>
+    <div class="mars"></div>
+    <div class="jupiter"></div>
+    <div class="saturn"></div>
+    <div class="uranus"></div>
+    <div class="neptune"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
