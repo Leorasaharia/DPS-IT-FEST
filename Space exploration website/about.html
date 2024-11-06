@@ -10,15 +10,27 @@
         /* General Styles */
         body {
             overflow: hidden;
-            background-color: black; /* Set a black background */
+            background-color: black;
             color: white;
             font-family: 'Orbitron', sans-serif;
         }
 
+        /* SpaceByte Text */
+        .space-byte {
+            font-size: 2rem;
+            color: #c25e5e;
+            text-shadow: 0 0 10px #c25e5e, 0 0 20px #2f4858;
+        }
+
         /* Main Content */
         #main-content {
-            height: 90vh; /* Set height to allow scrolling */
-            overflow-y: auto; /* Enable vertical scrolling */
+            height: 90vh;
+            overflow-y: auto;
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+        }
+        #main-content::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Animated Heading */
@@ -28,7 +40,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: float 3s ease-in-out infinite, flicker 2s infinite;
-            text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(128, 0, 128, 0.7);
+            text-shadow: 0 0 10px #c25e5e, 0 0 20px #2f4858;
         }
 
         @keyframes float {
@@ -85,11 +97,10 @@
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="p-4">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-purple-600 glow-on-hover">
-                SpaceByte
-            </a>
+            <a href="index.html" class="space-byte font-bold transition duration-300 hover:text-pink-400">SpaceByte</a>
         </div>
     </nav>
 
@@ -147,16 +158,16 @@
             const star = document.createElement('div');
             star.classList.add('shooting-star');
             star.style.left = `${Math.random() * 100}vw`;
-            star.style.top = `${Math.random() * 100}vh`; // Start from a random vertical position
-            const duration = Math.random() * 2 + 1; // Duration between 1s and 3s
+            star.style.top = `${Math.random() * 100}vh`;
+            const duration = Math.random() * 2 + 1;
             star.style.animationDuration = `${duration}s`;
             shootingStarContainer.appendChild(star);
             setTimeout(() => {
                 shootingStarContainer.removeChild(star);
-            }, duration * 1000); // Match timeout with animation duration
+            }, duration * 1000);
         }
 
-        setInterval(createShootingStar, 500); // Create shooting stars every 500ms
+        setInterval(createShootingStar, 500);
     </script>
 
     <footer class="bg-gray-900 py-4 mt-8">

@@ -23,11 +23,22 @@
     }
 
     /* Main Content Area */
-    #main-content {
-      height: 90vh; /* Set height to allow scrolling */
-      overflow-y: auto; /* Enable vertical scrolling */
-      padding-bottom: 100px; /* Ensure space for the footer */
-    }
+#main-content {
+  height: 90vh; /* Set height to allow scrolling */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  padding-bottom: 100px; /* Ensure space for the footer */
+}
+
+/* Hide scrollbar */
+#main-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit browsers */
+}
+
+#main-content {
+  -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+  scrollbar-width: none;     /* Hide scrollbar in Firefox */
+}
+
 
     /* Section Cards */
     .card {
@@ -209,7 +220,7 @@
         musicToggle.innerHTML = '🔊'; // Update to loudspeaker emoji
       } else {
         music.pause();
-        musicToggle.innerHTML = '🔈'; // Update to muted speaker emoji
+        musicToggle.innerHTML = '🔇'; // Update to muted speaker emoji
       }
     }
     // Play music automatically when the page loads
