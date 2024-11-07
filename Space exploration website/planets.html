@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planets | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #08FF6D;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #EB12C9;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #08FF6D, #EB12C9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(8, 255, 109, 0.7), 0 0 20px rgba(235, 18, 201, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(8, 255, 109, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../spacipedia.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Planets</h1>
+
+        <p class="text-center text-lg mb-10">
+            Planets are diverse celestial bodies orbiting stars, each unique in composition, structure, and environmental conditions. From rocky planets to gas giants, the variety in planetary types across the universe enriches our understanding of cosmic diversity.
+        </p>
+
+        <!-- Card Tile Section Design for Sub-Division Categories -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Categories of Planets</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Rocky Planets -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Rocky Planets</h3>
+                    <p>These planets have solid, rocky surfaces and are typically smaller. Examples include Earth and Mars.</p>
+                </div>
+
+                <!-- Card 2: Rogue Planets -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Rogue Planets</h3>
+                    <p>Rogue planets wander through space without a star, likely ejected from their original systems.</p>
+                </div>
+
+                <!-- Card 3: Gas Giants -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Gas Giants</h3>
+                    <p>Massive planets with thick atmospheres primarily composed of hydrogen and helium, like Jupiter.</p>
+                </div>
+
+                <!-- Card 4: Dwarf Planets -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Dwarf Planets</h3>
+                    <p>Small celestial bodies in orbit around the Sun, such as Pluto, that do not dominate their orbits.</p>
+                </div>
+
+                <!-- Card 5: Ice Giants -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Ice Giants</h3>
+                    <p>Planets with thick atmospheres rich in water, ammonia, and methane, like Neptune and Uranus.</p>
+                </div>
+
+                <!-- Card 6: Planets of Our Solar System -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Planets of Our Solar System</h3>
+                    <p>Discover the planets that make up our own solar system, from Mercury to Neptune.</p>
+                    <a href="ssp.html" class="text-blue-400 underline">Learn More &raquo;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Planets</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Rocky Planet Image -->
+                <div>
+                    <img src="assets/images/planets/planets.png" alt="Rocky Planet" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Rocky Planet</p>
+                </div>
+                
+                <!-- Rogue Planet Image -->
+                <div>
+                    <img src="assets/images/planets/planets (1).png" alt="Rogue Planet" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Rogue Planet</p>
+                </div>
+                
+                <!-- Gas Giant Image -->
+                <div>
+                    <img src="assets/images/planets/planets (2).png" alt="Gas Giant" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Gas Giant</p>
+                </div>
+                
+                <!-- Dwarf Planet Image -->
+                <div>
+                    <img src="assets/images/planets/planets (3).png" alt="Dwarf Planet" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Dwarf Planet</p>
+                </div>
+                
+                <!-- Ice Giant Image -->
+                <div>
+                    <img src="assets/images/planets/planets (4).png" alt="Ice Giant" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Ice Giant</p>
+                </div>
+                
+                <!-- Solar System Planets Image -->
+                <div>
+                    <img src="assets/images/planets/planets (5).png" alt="Planets of Solar System" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Planets of Solar System</p>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- Smooth Animations for Expanding Cards -->
+        <style>
+            /* Hover Glow Effect for Gallery Images */
+            .galaxy-image {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 10px;
+            }
+        
+            .galaxy-image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(8, 255, 109, 0.8), 0 0 25px rgba(235, 18, 201, 0.7);
+            }
+        </style>
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

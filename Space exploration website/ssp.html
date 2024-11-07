@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Planets | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #08FF6D;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #EB12C9;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #08FF6D, #EB12C9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(8, 255, 109, 0.7), 0 0 20px rgba(235, 18, 201, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .planet-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .planet-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(8, 255, 109, 0.859);
+        }
+
+        /* Gallery Styles */
+        .planet-image {
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .planet-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(8, 255, 109, 0.7);
+        }
+        .gallery-title {
+            font-size: 1rem;
+            color: #08FF6D;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="planets.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Planets of Our Solar System</h1>
+
+        <!-- Card Tile Section for Each Planet -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards for each planet -->
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Mercury</h3>
+                <p>As the closest planet to the Sun, Mercury has extremely high temperatures and a thin atmosphere. It's known for its rapid orbit and small size.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Venus</h3>
+                <p>With a thick, toxic atmosphere, Venus experiences a runaway greenhouse effect, making it the hottest planet. It's known as Earth's "sister planet" due to its similar size.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Earth</h3>
+                <p>Our home planet, Earth, is the only known planet with liquid water on its surface and the conditions to support life as we know it.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Mars</h3>
+                <p>Often called the "Red Planet," Mars has a thin atmosphere and surface features reminiscent of both Earth and the Moon, with the possibility of ancient life.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Jupiter</h3>
+                <p>The largest planet in our solar system, Jupiter is a gas giant with a massive storm system known as the Great Red Spot, persisting for centuries.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Saturn</h3>
+                <p>Famous for its prominent ring system, Saturn is another gas giant with a fascinating array of moons and complex atmospheric phenomena.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Uranus</h3>
+                <p>An ice giant with a striking blue-green color due to methane, Uranus orbits the Sun on its side, giving it a unique rotational axis.</p>
+            </div>
+
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Neptune</h3>
+                <p>Known for its intense blue color and fierce storms, Neptune is the outermost planet and an ice giant with a dynamic atmosphere.</p>
+            </div>
+
+            <!-- Pluto Card: The Sad Story of Pluto -->
+            <div class="planet-card">
+                <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Pluto</h3>
+                <p>Originally considered the ninth planet, Pluto was reclassified as a "dwarf planet" in 2006 due to its size and irregular orbit. The demotion sparked a global movement with the rallying cry: <strong>#JusticeForPluto</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section with Images -->
+        <section class="py-10">
+            <h2 class="animated-heading text-center mb-8">Planet Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Planet Images -->
+                <div>
+                    <img src="assets/images/planets/mercury.png" alt="Mercury" class="planet-image">
+                    <p class="gallery-title">Mercury</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/venus.png" alt="Venus" class="planet-image">
+                    <p class="gallery-title">Venus</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/earth.png" alt="Earth" class="planet-image">
+                    <p class="gallery-title">Earth</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/mars.png" alt="Mars" class="planet-image">
+                    <p class="gallery-title">Mars</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/jupiter.png" alt="Jupiter" class="planet-image">
+                    <p class="gallery-title">Jupiter</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/saturn.png" alt="Saturn" class="planet-image">
+                    <p class="gallery-title">Saturn</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/uranus.png" alt="Uranus" class="planet-image">
+                    <p class="gallery-title">Uranus</p>
+                </div>
+                <div>
+                    <img src="assets/images/planets/neptune.png" alt="Neptune" class="planet-image">
+                    <p class="gallery-title">Neptune</p>
+                </div>
+                <!-- Pluto Image with Title -->
+                <div>
+                    <img src="assets/images/planets/pluto.png" alt="Pluto" class="planet-image">
+                    <p class="gallery-title">Pluto</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
