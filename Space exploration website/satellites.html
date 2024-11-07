@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satellites | SpaceByte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Back Button */
+        .back-btn {
+            font-size: 1rem;
+            color: #08FF6D;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover {
+            color: #EB12C9;
+        }
+
+        /* Heading Animation */
+        .animated-heading {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #08FF6D, #EB12C9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: float 3s ease-in-out infinite, flicker 2s infinite;
+            text-shadow: 0 0 10px rgba(8, 255, 109, 0.7), 0 0 20px rgba(235, 18, 201, 0.7);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .info-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(8, 255, 109, 0.8);
+        }
+
+        /* Gallery Image Styles */
+        .galaxy-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+        .galaxy-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(8, 255, 109, 0.8), 0 0 25px rgba(235, 18, 201, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-start">
+            <a href="../spacipedia.html" class="back-btn font-bold transition duration-300"> ← </a>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="animated-heading text-center mb-8">Satellites</h1>
+
+        <p class="text-center text-lg mb-10">
+            Satellites are human-made or natural objects that orbit planets, moons, or stars. They serve various purposes including communication, observation, navigation, and scientific research.
+        </p>
+
+        <!-- Card Tile Section Design for Sub-Division Categories -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Categories of Satellites</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Communication Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Communication Satellites</h3>
+                    <p>These satellites help in transmitting communication signals like television, radio, and internet services.</p>
+                </div>
+
+                <!-- Card 2: Weather Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Weather Satellites</h3>
+                    <p>Used for monitoring weather patterns and providing data for forecasting and climate analysis.</p>
+                </div>
+
+                <!-- Card 3: Navigation Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Navigation Satellites</h3>
+                    <p>Provide global positioning system (GPS) services for navigation and location tracking.</p>
+                </div>
+
+                <!-- Card 4: Earth Observation Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Earth Observation Satellites</h3>
+                    <p>These satellites monitor Earth's surface, climate, and other natural resources for environmental studies.</p>
+                </div>
+
+                <!-- Card 5: Scientific Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Scientific Satellites</h3>
+                    <p>Launched for the purpose of space exploration, research, and scientific experiments.</p>
+                </div>
+
+                <!-- Card 6: Military Satellites -->
+                <div class="info-card">
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Military Satellites</h3>
+                    <p>Utilized for reconnaissance, surveillance, and communication for defense purposes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="mb-12">
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Satellites</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Communication Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites.png" alt="Communication Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Communication Satellite</p>
+                </div>
+                
+                <!-- Weather Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites (1).png" alt="Weather Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Weather Satellite</p>
+                </div>
+                
+                <!-- Navigation Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites (2).png" alt="Navigation Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Navigation Satellite</p>
+                </div>
+                
+                <!-- Earth Observation Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites (3).png" alt="Earth Observation Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Earth Observation Satellite</p>
+                </div>
+                
+                <!-- Scientific Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites (4).png" alt="Scientific Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Scientific Satellite</p>
+                </div>
+                
+                <!-- Military Satellite Image -->
+                <div>
+                    <img src="assets/images/satellites/satellites (5).png" alt="Military Satellite" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Military Satellite</p>
+                </div>
+        
+            </div>
+        </section>
+    </main>
+
+    <!-- Smooth Animations for Expanding Cards -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

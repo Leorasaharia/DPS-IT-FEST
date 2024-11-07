@@ -18,21 +18,21 @@
         /* Back Button */
         .back-btn {
             font-size: 1rem;
-            color: #08FF6D;
+            color: #EB12C9;
             transition: color 0.3s ease;
         }
         .back-btn:hover {
-            color: #EB12C9;
+            color: #08FF6D;
         }
 
         /* Heading Animation */
         .animated-heading {
             font-size: 2.5rem;
-            background: linear-gradient(90deg, #08FF6D, #EB12C9);
+            background: linear-gradient(90deg, #EB12C9, #08FF6D);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: float 3s ease-in-out infinite, flicker 2s infinite;
-            text-shadow: 0 0 10px rgba(8, 255, 109, 0.7), 0 0 20px rgba(235, 18, 201, 0.7);
+            text-shadow: 0 0 10px rgba(235, 18, 201, 0.7), 0 0 20px rgba(8, 255, 109, 0.7);
         }
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -53,17 +53,7 @@
         }
         .info-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(8, 255, 109, 0.8);
-        }
-
-        /* Gallery Image Styles */
-        .galaxy-image {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 10px;
-        }
-        .galaxy-image:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(8, 255, 109, 0.8), 0 0 25px rgba(235, 18, 201, 0.7);
+            box-shadow: 0 0 20px rgba(235, 18, 201, 0.8);
         }
     </style>
 </head>
@@ -81,55 +71,55 @@
         <h1 class="animated-heading text-center mb-8">Stars</h1>
 
         <p class="text-center text-lg mb-10">
-            Stars are luminous celestial bodies composed primarily of hydrogen and helium, producing energy through nuclear fusion. They vary in size, brightness, and lifespan, enriching our galaxy with their presence and radiance.
+            Stars are massive luminous celestial bodies made of plasma, primarily hydrogen and helium, generating energy through nuclear fusion. They play a vital role in the universe, forming the building blocks of galaxies and providing energy for planetary systems.
         </p>
 
         <!-- Card Tile Section Design for Sub-Division Categories -->
         <section class="mb-12">
-            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Categories of Stars</h2>
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #EB12C9, #08FF6D); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Categories of Stars</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Card 1: Main Sequence Stars -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Main Sequence Stars</h3>
-                    <p>Stars that fuse hydrogen into helium in their cores, like our Sun.</p>
+                    <p>The most common type of stars, including the Sun, generating energy by fusing hydrogen into helium.</p>
                 </div>
 
                 <!-- Card 2: Red Giants -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Red Giants</h3>
-                    <p>Expanding stars that have exhausted hydrogen in their cores, appearing red and massive.</p>
+                    <p>Large, luminous stars nearing the end of their life, having expanded after exhausting hydrogen in their core.</p>
                 </div>
 
                 <!-- Card 3: White Dwarfs -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">White Dwarfs</h3>
-                    <p>Small, dense remnants of stars that have shed their outer layers.</p>
+                    <p>Dense remnants of stars that have exhausted nuclear fuel, slowly cooling over billions of years.</p>
                 </div>
 
                 <!-- Card 4: Neutron Stars -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Neutron Stars</h3>
-                    <p>Extremely dense stars formed from the remnants of massive stars after a supernova.</p>
+                    <p>Incredibly dense stars, formed from supernova remnants, composed primarily of neutrons.</p>
                 </div>
 
-                <!-- Card 5: Supernova Stars -->
+                <!-- Card 5: Supergiants -->
                 <div class="info-card">
-                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Supernova Stars</h3>
-                    <p>Massive explosions that mark the death of massive stars, scattering elements across the universe.</p>
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Supergiants</h3>
+                    <p>Extremely massive and luminous stars, representing an advanced stage in stellar evolution.</p>
                 </div>
 
-                <!-- Card 6: Pulsars -->
+                <!-- Card 6: Binary Stars -->
                 <div class="info-card">
-                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Pulsars</h3>
-                    <p>Highly magnetized, rotating neutron stars that emit beams of electromagnetic radiation.</p>
+                    <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Binary Stars</h3>
+                    <p>Systems of two stars orbiting each other, often influencing each other's evolution and properties.</p>
                 </div>
             </div>
         </section>
 
         <!-- Gallery Section -->
         <section class="mb-12">
-            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Stars</h2>
+            <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #EB12C9, #08FF6D); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Stars</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Main Sequence Star Image -->
@@ -156,23 +146,36 @@
                     <p class="text-center mt-2">Neutron Star</p>
                 </div>
                 
-                <!-- Supernova Image -->
+                <!-- Supergiant Image -->
                 <div>
-                    <img src="assets/images/stars/stars (4).png" alt="Supernova" class="w-full h-auto galaxy-image">
-                    <p class="text-center mt-2">Supernova</p>
+                    <img src="assets/images/stars/stars (4).png" alt="Supergiant" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Supergiant</p>
                 </div>
                 
-                <!-- Pulsar Image -->
+                <!-- Binary Stars Image -->
                 <div>
-                    <img src="assets/images/stars/stars (5).png" alt="Pulsar" class="w-full h-auto galaxy-image">
-                    <p class="text-center mt-2">Pulsar</p>
+                    <img src="assets/images/stars/stars (5).png" alt="Binary Stars" class="w-full h-auto galaxy-image">
+                    <p class="text-center mt-2">Binary Stars</p>
                 </div>
         
             </div>
         </section>
+
+        <!-- Smooth Animations for Expanding Cards -->
+        <style>
+            /* Hover Glow Effect for Gallery Images */
+            .galaxy-image {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                border-radius: 10px;
+            }
+        
+            .galaxy-image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 15px rgba(235, 18, 201, 0.8), 0 0 25px rgba(8, 255, 109, 0.7);
+            }
+        </style>
     </main>
 
-    <!-- Smooth Animations for Expanding Cards -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
