@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* General Styles */
+        
         body {
             background-color: black;
             color: white;
@@ -15,7 +15,7 @@
             overflow-x: hidden;
         }
 
-        /* Back Button */
+        
         .back-btn {
             font-size: 1rem;
             color: #08FF6D;
@@ -25,7 +25,7 @@
             color: #EB12C9;
         }
 
-        /* Heading Animation */
+        
         .animated-heading {
             font-size: 2.5rem;
             background: linear-gradient(90deg, #08FF6D, #EB12C9);
@@ -43,7 +43,7 @@
             50% { opacity: 0.8; }
         }
 
-        /* Card Styles */
+        
         .info-card {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -59,14 +59,14 @@
 </head>
 <body>
 
-    <!-- Back Button -->
+    
     <nav class="p-4">
         <div class="container mx-auto flex justify-start">
             <a href="../spacipedia.html" class="back-btn font-bold transition duration-300"> ← </a>
         </div>
     </nav>
 
-    <!-- Page Content -->
+    
     <main class="container mx-auto px-4 py-8">
         <h1 class="animated-heading text-center mb-8">Planets</h1>
 
@@ -74,12 +74,12 @@
             Planets are diverse celestial bodies orbiting stars, each unique in composition, structure, and environmental conditions. From rocky planets to gas giants, the variety in planetary types across the universe enriches our understanding of cosmic diversity.
         </p>
 
-        <!-- Card Tile Section Design for Sub-Division Categories -->
+        
         <section class="mb-12">
             <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Categories of Planets</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Card 1: Rocky Planets -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Rocky Planets</h3>
                     <p>
@@ -87,7 +87,7 @@
                     </p>
                 </div>
 
-                <!-- Card 2: Rogue Planets -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Rogue Planets</h3>
                     <p>
@@ -95,7 +95,7 @@
                     </p>
                 </div>
 
-                <!-- Card 3: Gas Giants -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Gas Giants</h3>
                     <p>
@@ -103,7 +103,7 @@
                     </p> 
                 </div>
 
-                <!-- Card 4: Dwarf Planets -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Dwarf Planets</h3>
                     <p>
@@ -111,7 +111,7 @@
                     </p>
                 </div>
 
-                <!-- Card 5: Ice Giants -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Ice Giants</h3>
                     <p>
@@ -119,7 +119,7 @@
                     </p>   
                 </div>
 
-                <!-- Card 6: Planets of Our Solar System -->
+                
                 <div class="info-card">
                     <h3 class="text-xl font-bold mb-2" style="color: #08FF6D;">Planets of Our Solar System</h3>
                     <p>Discover the planets that make up our own solar system, from Mercury to Neptune.</p>
@@ -128,42 +128,42 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
+       
         <section class="mb-12">
             <h2 class="text-center text-2xl font-semibold mb-6" style="background: linear-gradient(90deg, #08FF6D, #EB12C9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Visuals of Planets</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Rocky Planet Image -->
+                
                 <div>
                     <img src="assets/images/planets/planets.png" alt="Rocky Planet" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Rocky Planet</p>
                 </div>
                 
-                <!-- Rogue Planet Image -->
+                
                 <div>
                     <img src="assets/images/planets/planets (1).png" alt="Rogue Planet" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Rogue Planet</p>
                 </div>
                 
-                <!-- Gas Giant Image -->
+                
                 <div>
                     <img src="assets/images/planets/planets (2).png" alt="Gas Giant" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Gas Giant</p>
                 </div>
                 
-                <!-- Dwarf Planet Image -->
+                
                 <div>
                     <img src="assets/images/planets/planets (3).png" alt="Dwarf Planet" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Dwarf Planet</p>
                 </div>
                 
-                <!-- Ice Giant Image -->
+               
                 <div>
                     <img src="assets/images/planets/planets (4).png" alt="Ice Giant" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Ice Giant</p>
                 </div>
                 
-                <!-- Solar System Planets Image -->
+                
                 <div>
                     <img src="assets/images/planets/planets (5).png" alt="Planets of Solar System" class="w-full h-auto galaxy-image">
                     <p class="text-center mt-2">Planets of Solar System</p>
@@ -172,9 +172,9 @@
             </div>
         </section>
 
-        <!-- Smooth Animations for Expanding Cards -->
+        
         <style>
-            /* Hover Glow Effect for Gallery Images */
+            
             .galaxy-image {
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                 border-radius: 10px;
@@ -187,7 +187,7 @@
         </style>
     </main>
 
-    <!-- Smooth Animations for Expanding Cards -->
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* General Styles */
         body {
             background-color: black;
             color: white;
@@ -15,7 +14,6 @@
             overflow-x: hidden;
         }
 
-        /* Back to Discoveries Button */
         .back-btn {
             font-size: 1rem;
             color: #dbf86f;
@@ -25,7 +23,6 @@
             color: #007263;
         }
 
-        /* Heading Animation */
         .animated-heading {
             font-size: 2.5rem;
             background: linear-gradient(90deg, #dbf86f, #007263);
@@ -43,7 +40,6 @@
             50% { opacity: 0.8; }
         }
 
-        /* Card Styles */
         .info-card {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -56,7 +52,6 @@
             box-shadow: 0 0 20px rgba(219, 248, 111, 0.859);
         }
 
-        /* Image Hover Effect */
         .jan-image {
             border-radius: 8px;
             transition: transform 0.5s ease, box-shadow 0.3s ease;
@@ -69,32 +64,26 @@
 </head>
 <body>
 
-    <!-- Back Button -->
     <nav class="p-4">
         <div class="container mx-auto flex justify-start">
             <a href="../personalities.html" class="back-btn font-bold transition duration-300"> ← </a>
         </div>
     </nav>
 
-    <!-- Page Content -->
     <main class="container mx-auto px-4 py-8">
         <h1 class="animated-heading text-center mb-8">Jan Wörner</h1>
 
-        <!-- Jan Wörner Image -->
         <div class="flex justify-center mb-6">
             <img src="../assets/images/personalities/jan-main.png" alt="Jan Wörner" class="jan-image max-w-xs sm:max-w-md lg:max-w-lg">
         </div>
 
-        <!-- Introductory Description -->
         <p class="text-center text-lg mb-10">
             Jan Wörner, former Director General of the European Space Agency (ESA), has been instrumental in advancing European space exploration. His vision of a collaborative "Moon Village" represents a new era of international partnership and sustainable lunar exploration, making him a significant figure in the space industry.
         </p>
 
-        <!-- Contributions Section -->
         <section class="mb-12">
             <h2 class="text-center text-2xl font-semibold text-green-700 mb-6">Key Contributions to Space Exploration</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1: Moon Village Concept -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Moon Village Concept</h3>
                     <p>
@@ -102,7 +91,6 @@
                     </p>
                 </div>
 
-                <!-- Card 2: European Space Policy -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">European Space Policy</h3>
                     <p>
@@ -110,7 +98,6 @@
                     </p>
                 </div>
 
-                <!-- Card 3: Mars and Beyond -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Mars and Beyond</h3>
                     <p>
@@ -118,7 +105,6 @@
                     </p>
                 </div>
 
-                <!-- Card 4: International Partnerships -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">International Partnerships</h3>
                     <p>
@@ -126,7 +112,6 @@
                     </p>
                 </div>
 
-                <!-- Card 5: Earth Observation Initiatives -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Earth Observation Initiatives</h3>
                     <p>
@@ -134,7 +119,6 @@
                     </p>
                 </div>
 
-                <!-- Card 6: Future Space Technologies -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Future Space Technologies</h3>
                     <p>
@@ -144,11 +128,9 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section>
             <h2 class="text-center text-2xl font-semibold text-green-700 mb-6">Gallery</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Add images once available in the src attributes below -->
                 <img src="../assets/images/personalities/jan-1.png" alt="Jan Wörner at ESA" class="jan-image">
                 <img src="../assets/images/personalities/jan-2.png" alt="Moon Village Concept" class="jan-image">
                 <img src="../assets/images/personalities/jan-3.png" alt="ExoMars Mission" class="jan-image">
@@ -159,7 +141,6 @@
         </section>        
     </main>
 
-    <!-- Smooth Animations for Expanding Cards -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

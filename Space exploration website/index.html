@@ -6,7 +6,6 @@
   <title>SpaceByte | Welcome</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <style>
-    /* General Styles */
     body {
       background-color: #000;
       color: #fff;
@@ -14,7 +13,6 @@
       overflow: hidden;
     }
 
-    /* Heading and Button Styles */
     .heading {
       font-size: 6rem;
       font-weight: bold;
@@ -22,12 +20,20 @@
       -webkit-background-clip: text;
       color: transparent;
       text-shadow: 0px 0px 10px rgba(255, 0, 153, 0.5), 0px 0px 10px rgba(153, 0, 255, 0.5);
+      animation: flicker 1.5s infinite alternate;
     }
 
     .subheading {
       font-size: 1.5rem;
       color: #fff;
       text-shadow: 0 0 10px #ff00ff, 0 0 20px #9900ff;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.7; }
+      100% { opacity: 1; }
     }
 
     .btn-continue {
@@ -44,87 +50,66 @@
       text-shadow: 0 0 5px #ff00ff, 0 0 10px #9900ff;
     }
 
-    /* Rocket Launch Animation */
     .rocket {
       position: absolute;
-      bottom: 0;
+      bottom: -20%;
       left: 50%;
-      transform: translateX(-50%) scale(1.5);
-      width: 75px;
-      height: 150px;
+      transform: translateX(-50%);
+      width: 15%;
+      height: 20%;
       background: url('assets/images/rocket.png') no-repeat center;
       background-size: cover;
-      opacity: 0;
-      animation: launch 2s forwards;
+      animation: rocketLaunch 4s forwards;
     }
 
-    /* Keyframes for Rocket Animation */
-    @keyframes launch {
-      0% { opacity: 1; bottom: 0; transform: translateX(-50%) scale(1.5); }
-      100% { opacity: 0; bottom: 100vh; transform: translateX(-50%) scale(1); }
+    @keyframes rocketLaunch {
+      0% { bottom: -20%; }
+      100% { bottom: 100%; }
     }
 
-    /* Comet Animation */
-    .comet {
-      position: absolute;
-      width: 4px;
-      height: 15px;
-      background: linear-gradient(45deg, white, transparent);
-      animation: cometAnimation 4s linear infinite;
-      opacity: 0.8;
-    }
-
-    @keyframes cometAnimation {
-      0% { transform: translate(100vw, -50vh); opacity: 1; }
-      100% { transform: translate(-100vw, 50vh); opacity: 0; }
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
 
-  <!-- Background music -->
+  <video id="video-background" autoplay muted loop>
+    <source src="assets/videos/background.mp4" type="video/mp4">
+  </video>
+
   <audio id="background-music" loop autoplay>
     <source src="assets/audio/space-music.mp3" type="audio/mp3">
   </audio>
 
-  <!-- Welcome Section -->
   <div class="flex flex-col items-center justify-center min-h-screen text-center px-4">
-    <h1 class="heading mb-6">Welcome to SpaceByte</h1>
-    <p class="subheading mb-6">Explore The Endless</p>
+    <h1 class="heading mb-6">SpaceByte</h1>
+    <p class="subheading mb-6">Explore the Endless</p>
 
-    <!-- Continue Button to Trigger Rocket Launch -->
-    <button onclick="launchRocket()" class="btn-continue">Continue</button>
+    <button onclick="startJourney()" class="btn-continue">Continue</button>
   </div>
 
-  <!-- Rocket Element for Animation -->
-  <div id="rocket" class="rocket hidden"></div>
-
-  <!-- Comet Animations -->
-  <div class="comet" style="top: 0%; left: 10%;"></div>
-  <div class="comet" style="top: 30%; left: 20%;"></div>
-  <div class="comet" style="top: 70%; left: 80%;"></div>
-  <div class="comet" style="top: 20%; left: 40%;"></div>
-  <div class="comet" style="top: 60%; left: 70%;"></div>
-  <div class="comet" style="top: 50%; left: 0%;"></div>
-  <div class="comet" style="top: 41%; left: 22%;"></div>
-  <div class="comet" style="top: 11%; left: 92%;"></div>
-  <div class="comet" style="top: 85%; left: 66%;"></div>
-  <div class="comet" style="top: 9%; left: 30%;"></div>
+  <div id="rocket" class="rocket" style="visibility: hidden;"></div>
 
   <script>
-    // Play music automatically when the page loads
     window.onload = () => {
       const music = document.getElementById('background-music');
       music.play();
     };
 
-    // Launch rocket animation and redirect to main page
-    function launchRocket() {
+    function startJourney() {
       const rocket = document.getElementById('rocket');
-      rocket.classList.remove('hidden');
+      rocket.style.visibility = "visible";
+      rocket.style.animation = "rocketLaunch 4s forwards";
       setTimeout(() => {
         window.location.href = 'main.html';
-      }, 2000);  // 2 seconds delay before redirect
+      }, 4000); 
     }
   </script>
 </body>

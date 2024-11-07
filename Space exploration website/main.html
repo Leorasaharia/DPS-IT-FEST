@@ -7,40 +7,34 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* General Styles */
     body {
       background-color: black;
       color: white;
       font-family: 'Orbitron', sans-serif;
-      overflow: hidden; /* Prevent body overflow */
+      overflow: hidden;
     }
 
-    /* SpaceByte Text */
     .space-byte {
       font-size: 2rem;
       color: #ff0099;
       text-shadow: 0 0 10px #ff0099, 0 0 20px #9900ff;
     }
 
-    /* Main Content Area */
-#main-content {
-  height: 90vh; /* Set height to allow scrolling */
-  overflow-y: scroll; /* Enable vertical scrolling */
-  padding-bottom: 100px; /* Ensure space for the footer */
-}
+    #main-content {
+      height: 90vh;
+      overflow-y: scroll;
+      padding-bottom: 100px;
+    }
 
-/* Hide scrollbar */
-#main-content::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit browsers */
-}
+    #main-content::-webkit-scrollbar {
+      display: none;
+    }
 
-#main-content {
-  -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
-  scrollbar-width: none;     /* Hide scrollbar in Firefox */
-}
+    #main-content {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
 
-
-    /* Section Cards */
     .card {
       background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
@@ -50,12 +44,12 @@
     }
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.859); /* Changed to pink glow */
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.859);
     }
     .card-title {
       font-size: 1.75rem;
       color: #ff0099;
-      background: linear-gradient(90deg, #845ec2, #f9f871); /* Updated gradient */
+      background: linear-gradient(90deg, #845ec2, #f9f871);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -68,10 +62,9 @@
       color: #9900ff;
     }
 
-    /* Animated Heading */
     .animated-heading {
       font-size: 3.5rem;
-      background: linear-gradient(90deg, #845ec2, #f9f871); /* Updated gradient */
+      background: linear-gradient(90deg, #845ec2, #f9f871);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: float 3s ease-in-out infinite, flicker 2s infinite;
@@ -86,7 +79,6 @@
       50% { opacity: 0; }
     }
 
-    /* Flickering Effect for Subheading */
     .flicker {
       animation: flicker 1s infinite;
       text-align: center;
@@ -99,17 +91,15 @@
       90% { opacity: 0.4; }
     }
 
-    /* Music Toggle */
     .music-toggle {
       position: absolute;
       top: 20px;
       right: 20px;
       font-size: 2rem;
       cursor: pointer;
-      z-index: 1000; /* Ensure it's on top of other elements */
+      z-index: 1000;
     }
 
-    /* Comet Animation */
     .comet {
       position: absolute;
       width: 4px;
@@ -126,62 +116,51 @@
 </head>
 <body>
 
-  <!-- Background Music -->
   <audio id="background-music" src="assets/audio/space-music.mp3" loop></audio>
 
-  <!-- Music Toggle Button -->
   <div class="music-toggle" id="music-toggle" onclick="toggleMusic()">🔊</div>
 
-  <!-- Navigation Bar -->
   <nav class="p-4">
     <div class="container mx-auto flex justify-between items-center">
       <a href="index.html" class="space-byte font-bold transition duration-300 hover:text-purple-500">SpaceByte</a>
     </div>
   </nav>
 
-  <!-- Page Content -->
   <main id="main-content" class="container mx-auto px-4 py-8">
     <h1 class="animated-heading text-center mb-8">Welcome to SpaceByte</h1>
     <p class="flicker">Explore the Cosmos. Discover the Infinite.</p>
 
-    <!-- Space Sections -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Spacipedia -->
       <div class="card">
         <h2 class="card-title">Spacipedia</h2>
         <p class="mt-2">Explore our vast cosmic encyclopedia.</p>
         <a href="spacipedia.html" class="learn-more mt-4">Learn More &raquo;</a>
       </div>
 
-      <!-- New Discoveries -->
       <div class="card">
         <h2 class="card-title">New Discoveries</h2>
         <p class="mt-2">Latest breakthroughs in space science.</p>
         <a href="new-discoveries.html" class="learn-more mt-4">Learn More &raquo;</a>
       </div>
 
-      <!-- Space Tourism -->
       <div class="card">
         <h2 class="card-title">Space Tourism</h2>
         <p class="mt-2">Your gateway to the stars and unforgettable adventures.</p>
         <a href="space-tourism.html" class="learn-more mt-4">Learn More &raquo;</a>
       </div>
 
-      <!-- Space Games -->
       <div class="card">
         <h2 class="card-title">Space Games</h2>
         <p class="mt-2">Engage in thrilling space adventures.</p>
         <a href="space-games.html" class="learn-more mt-4">Learn More &raquo;</a>
       </div>
 
-      <!-- Personalities -->
       <div class="card">
         <h2 class="card-title">Personalities</h2>
         <p class="mt-2">Discover famous personalities advocating the Cosmos.</p>
         <a href="personalities.html" class="learn-more mt-4">Learn More &raquo;</a>
       </div>
 
-      <!-- About Us -->
       <div class="card">
         <h2 class="card-title">About Us</h2>
         <p class="mt-2">Learn about our mission and team.</p>
@@ -190,7 +169,6 @@
     </div>
   </main>
 
-  <!-- Comet Animations -->
   <div class="comet" style="top: 10%; left: 10%;"></div>
   <div class="comet" style="top: 30%; left: 20%;"></div>
   <div class="comet" style="top: 50%; left: 30%;"></div>
@@ -202,28 +180,25 @@
   <div class="comet" style="top: 65%; left: 40%;"></div>
   <div class="comet" style="top: 35%; left: 25%;"></div>
 
-  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-4 text-center">
     <p>© 2024 SpaceByte. All rights reserved.</p>
   </footer>
 
-  <!-- Smooth Animations for Expanding Cards -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Background music toggle
     const music = document.getElementById('background-music');
     const musicToggle = document.getElementById('music-toggle');
 
     function toggleMusic() {
       if (music.paused) {
         music.play();
-        musicToggle.innerHTML = '🔊'; // Update to loudspeaker emoji
+        musicToggle.innerHTML = '🔊';
       } else {
         music.pause();
-        musicToggle.innerHTML = '🔇'; // Update to muted speaker emoji
+        musicToggle.innerHTML = '🔇';
       }
     }
-    // Play music automatically when the page loads
+
     window.onload = () => {
       const music = document.getElementById('background-music');
       music.play();

@@ -7,7 +7,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* General Styles */
         body {
             background-color: black;
             color: white;
@@ -15,7 +14,6 @@
             overflow-x: hidden;
         }
 
-        /* Back to Discoveries Button */
         .back-btn {
             font-size: 1rem;
             color: #dbf86f;
@@ -25,7 +23,6 @@
             color: #007263;
         }
 
-        /* Heading Animation */
         .animated-heading {
             font-size: 2.5rem;
             background: linear-gradient(90deg, #dbf86f, #007263);
@@ -43,7 +40,6 @@
             50% { opacity: 0.8; }
         }
 
-        /* Card Styles */
         .info-card {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -56,7 +52,6 @@
             box-shadow: 0 0 20px rgba(219, 248, 111, 0.859);
         }
 
-        /* Image Hover Effect */
         .kiran-image {
             border-radius: 8px;
             transition: transform 0.5s ease, box-shadow 0.3s ease;
@@ -69,32 +64,26 @@
 </head>
 <body>
 
-    <!-- Back Button -->
     <nav class="p-4">
         <div class="container mx-auto flex justify-start">
             <a href="../personalities.html" class="back-btn font-bold transition duration-300"> ← </a>
         </div>
     </nav>
 
-    <!-- Page Content -->
     <main class="container mx-auto px-4 py-8">
         <h1 class="animated-heading text-center mb-8">Kiran Sivan</h1>
 
-        <!-- Kiran Sivan Image -->
         <div class="flex justify-center mb-6">
             <img src="../assets/images/personalities/kiran-main.png" alt="Kiran Sivan" class="kiran-image max-w-xs sm:max-w-md lg:max-w-lg">
         </div>
 
-        <!-- Introductory Description -->
         <p class="text-center text-lg mb-10">
             Kiran Sivan, a renowned space scientist, has played a pivotal role in advancing India’s space exploration through his work at the Indian Space Research Organisation (ISRO). With a dedication to making space accessible and fostering innovation, Sivan has contributed to numerous groundbreaking projects, propelling India's space program onto the global stage.
         </p>
 
-        <!-- Contributions Section -->
         <section class="mb-12">
             <h2 class="text-center text-2xl font-semibold text-green-700 mb-6">Key Contributions to Space Exploration</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Card 1: Chandrayaan Missions -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Chandrayaan Missions</h3>
                     <p>
@@ -102,7 +91,6 @@
                     </p>
                 </div>
 
-                <!-- Card 2: Mars Orbiter Mission -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Mars Orbiter Mission</h3>
                     <p>
@@ -110,7 +98,6 @@
                     </p>
                 </div>
 
-                <!-- Card 3: Gaganyaan Mission -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Gaganyaan Mission</h3>
                     <p>
@@ -118,7 +105,6 @@
                     </p>
                 </div>
 
-                <!-- Card 4: PSLV and GSLV Programs -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">PSLV and GSLV Programs</h3>
                     <p>
@@ -126,7 +112,6 @@
                     </p>
                 </div>
 
-                <!-- Card 5: International Collaborations -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">International Collaborations</h3>
                     <p>
@@ -134,7 +119,6 @@
                     </p>
                 </div>
 
-                <!-- Card 6: Space Science for Societal Development -->
                 <div class="info-card">
                     <h3 class="text-xl font-bold text-green-400 mb-2">Space Science for Societal Development</h3>
                     <p>
@@ -144,11 +128,9 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
         <section>
             <h2 class="text-center text-2xl font-semibold text-green-700 mb-6">Gallery</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Add images once available in the src attributes below -->
                 <img src="../assets/images/personalities/kiran-1.png" alt="Kiran Sivan at ISRO" class="kiran-image">
                 <img src="../assets/images/personalities/kiran-2.png" alt="Chandrayaan Mission" class="kiran-image">
                 <img src="../assets/images/personalities/kiran-3.png" alt="Mars Orbiter Mission" class="kiran-image">
@@ -159,7 +141,6 @@
         </section>        
     </main>
 
-    <!-- Smooth Animations for Expanding Cards -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
